@@ -1,0 +1,24 @@
+{
+  "name": "ott",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^5.2.1",
+    "@rollup/plugin-json": "^6.1.0",
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "svelte": "^5.45.2",
+    "vite": "^7.3.1"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "svelte-loading-spinners": "^0.3.6",
+    "svelte-routing": "^2.13.0",
+    "swiper": "^8.3.0"
+  }
+}
