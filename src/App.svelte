@@ -24,14 +24,14 @@
 
 <Header/> 
 <Router>
+<!-- main page -->
   <Route path="/" component={() => MainPage}/>
-
+<!-- category main page -->
   <Route path="/popular" component={() => PopularPage}/>
   <Route path="/now" component={() => NowPage}/>
   <Route path="/top" component={() => TopPage}/>
   <Route path="/upcoming" component={() => UpcomingPage}/>
-
-  
+<!-- sub page -->
   <Route path="/popular/:id" component={() => PopularSubPage}/>
   <Route path="/now/:id" component={() => NowSubPage}/>
   <Route path="/top/:id" component={() => TopSubPage}/>
