@@ -70,6 +70,7 @@ header li a {
 header li a:hover {
   color: rgba(255, 255, 255, 1);
 }
+/* 추가 */
 header li a.active {
   color: #01b4e4;
 }
