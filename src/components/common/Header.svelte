@@ -1,10 +1,34 @@
 <script>
     import { links } from "svelte-routing";
     import Icon from '@iconify/svelte';
+    import {onMount} from 'svelte';
+
+    let header;
+    const handleScroll = () =>{
+        let windowTop = window.scrollY;
+
+        if(windowTop>50){
+            header.classList.add('active');
+        }else{
+            header.classList.remove('active');
+        }
+    }
+
+    //스크롤 이벤트 무한 발생 제거 
+    onMount(()=>{
+        const timer = setInterval(()=>{
+            window.addEventListener('scroll', handleScroll);
+        }, 100);
+
+        return () =>{
+            clearInterval(timer);
+            window.removeEventListener('scroll', handleScroll);
+        }
+    })
 </script>
 
 
-<header use:links>
+<header use:links bind:this={header}>
     <h1><a href="/"><img src="./img/moving_logo.svg" alt="무빙로고"/></a></h1>
     <ul>
         <li>
