@@ -6,14 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "devDependencies": {
     "@iconify/svelte": "^5.2.1",
     "@rollup/plugin-json": "^6.1.0",
     "@sveltejs/vite-plugin-svelte": "^6.2.1",
     "svelte": "^5.45.2",
-    "vite": "^7.3.1"
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
   },
   "dependencies": {
     "@iconify-json/ic": "^1.2.4",
