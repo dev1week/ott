@@ -25,20 +25,58 @@
             window.removeEventListener('scroll', handleScroll);
         }
     })
+
+    let currentFocusedCategory = 'MAIN';
 </script>
 
 
 <header use:links bind:this={header}>
-    <h1><a href="/"><img src="./img/moving_logo.svg" alt="무빙로고"/></a></h1>
+    <h1>
+        <a
+            href="/"
+            class:active={currentFocusedCategory === 'MAIN'}
+            on:click={() => (currentFocusedCategory = 'MAIN')}
+        >
+            <img src="./img/moving_logo.svg" alt="무빙로고"/>
+        </a>
+    </h1>
     <ul>
         <li>
-            <a href="/now">
+            <a
+                href="/now"
+                class:active={currentFocusedCategory === 'NOW'}
+                on:click={() => (currentFocusedCategory = 'NOW')}
+            >
                 <Icon icon="ic:round-live-tv" height="28" width="28" />
                 현재 상영작
             </a>
         </li>
-        <li><a href="/popular">인기영화</a></li>
-        <li><a href="/upcoming">개봉예정작</a></li>
-        <li><a href="/top">높은 평점</a></li>
+        <li>
+            <a
+                href="/popular"
+                class:active={currentFocusedCategory === 'POPULAR'}
+                on:click={() => (currentFocusedCategory = 'POPULAR')}
+            >
+                인기영화
+            </a>
+        </li>
+        <li>
+            <a
+                href="/upcoming"
+                class:active={currentFocusedCategory === 'UPCOMING'}
+                on:click={() => (currentFocusedCategory = 'UPCOMING')}
+            >
+                개봉예정작
+            </a>
+        </li>
+        <li>
+            <a
+                href="/top"
+                class:active={currentFocusedCategory === 'TOP'}
+                on:click={() => (currentFocusedCategory = 'TOP')}
+            >
+                높은 평점
+            </a>
+        </li>
     </ul>
 </header>
